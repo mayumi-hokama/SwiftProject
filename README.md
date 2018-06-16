@@ -18,3 +18,14 @@
 
 ## Googlカレンダー スケジュール
 
+## tableViewCellスワイプ
+
+## Loginアニメーション
+
+## カメラ 
+
+## 写真加工
+
+## CollectionView アニメーション
+
+

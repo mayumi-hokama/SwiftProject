@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="InstagramLogin" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="Vfb-b0-G5E" id="09Y-WB-Mbh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marumetagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZe-tx-3Us">
+                    <rect key="frame" x="32" y="120" width="311" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1x-EG-fBk">
+                    <rect key="frame" x="16" y="289" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="f6g-pd-Rmq"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-b0-G5E" customClass="IndicatorButton" customModule="InstagramLogin" customModuleProvider="target">
+                    <rect key="frame" x="16" y="399" width="343" height="50"/>
+                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5db-RR-xE5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="ログイン">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="POY-lO-0Qz"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-Ta-Cdc">
+                    <rect key="frame" x="16" y="219" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hWA-wC-sW4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vfb-b0-G5E" firstAttribute="top" secondItem="L1x-EG-fBk" secondAttribute="bottom" constant="70" id="1IG-1V-5Ml"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KZe-tx-3Us" secondAttribute="trailing" constant="32" id="1JI-b7-C3a"/>
+                <constraint firstItem="LYt-Ta-Cdc" firstAttribute="top" secondItem="KZe-tx-3Us" secondAttribute="bottom" constant="65" id="3O8-Fu-gGB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vfb-b0-G5E" secondAttribute="trailing" constant="16" id="8Vz-hD-qNC"/>
+                <constraint firstItem="Vfb-b0-G5E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BpV-rQ-VE5"/>
+                <constraint firstItem="KZe-tx-3Us" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="KYP-bl-ubd"/>
+                <constraint firstItem="L1x-EG-fBk" firstAttribute="top" secondItem="LYt-Ta-Cdc" secondAttribute="bottom" constant="30" id="QT0-bE-tVN"/>
+                <constraint firstItem="KZe-tx-3Us" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Qdb-UR-ZZR"/>
+                <constraint firstItem="LYt-Ta-Cdc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RYE-tc-kD2"/>
+                <constraint firstItem="L1x-EG-fBk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UPU-PX-bn3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L1x-EG-fBk" secondAttribute="trailing" constant="16" id="VqG-cs-K3f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LYt-Ta-Cdc" secondAttribute="trailing" constant="16" id="eil-09-fEp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

@@ -43,6 +43,7 @@ final class LoginViewController: UIViewController, DependencyInjectable {
     
     private func setupOutputs() {
         viewModel.outputs.isLoginProcess = { [weak self] isLogin in
+            self?.view.isUserInteractionEnabled = !isLogin
             isLogin ? self?.loginButton.startIndicatorAnimation() : self?.loginButton.stopIndicatorAnimation()
         }
     }

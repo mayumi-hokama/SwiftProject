@@ -123,20 +123,23 @@ class StickyHeader: NSObject {
 
     }
 
-    private func layoutContentView() {
+    func layoutContentView() {
         guard let scrollView = self.scrollView else { return }
 
-        //TODO: 定数
-        let minimumHeight:CGFloat  = 100
-        let height: CGFloat = 300
-
+        // headerの画像部分のやつ
+        let viewRelativeYOffset = scrollView.contentOffset.y + scrollView.contentInset.top - 100
+        let viewRelativeHeight  = -viewRelativeYOffset
         let relativeYOffset = scrollView.contentOffset.y + scrollView.contentInset.top - height
-        let relativeHeight  = -relativeYOffset;
+        let relativeHeight  = -relativeYOffset
 
-        let frame = CGRect(x: 0, y: relativeYOffset, width: scrollView.frame.size.width, height: (relativeHeight > minimumHeight) ? relativeHeight : minimumHeight )
+//        let frame = CGRect(x: 0, y: relativeYOffset, width: scrollView.frame.size.width, height: (relativeHeight > minimumHeight) ? relativeHeight : minimumHeight )
+        let frame = CGRect(x: 0, y: -height, width: scrollView.frame.size.width, height: height )
+        let headerViewFrame = CGRect(x: 0, y: viewRelativeYOffset, width: scrollView.frame.size.width, height: (viewRelativeHeight > minimumHeight) ? viewRelativeHeight : minimumHeight )
 
         //self.contentView.translatesAutoresizingMaskIntoConstraints = true
         self.contentView.frame = frame
+        //self._view?.frame = headerViewFrame
+
 
 //        var relativeYOffset: CGFloat = 0
 //
@@ -159,7 +162,7 @@ class StickyHeader: NSObject {
 
     public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let path = keyPath, path == "contentOffset" {
-            self.layoutContentView()
+            //self.layoutContentView()
         } else {
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }

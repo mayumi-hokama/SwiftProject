@@ -17,11 +17,17 @@
 		005BBDEE21C7A60400FA29E6 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBDED21C7A60400FA29E6 /* CustomScrollView.swift */; };
 		005BBDF121C7A70A00FA29E6 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBDEF21C7A70A00FA29E6 /* HeaderViewController.swift */; };
 		005BBDF221C7A70A00FA29E6 /* HeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BBDF021C7A70A00FA29E6 /* HeaderViewController.xib */; };
-		005BBDF521C7A72E00FA29E6 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBDF321C7A72E00FA29E6 /* ContentViewController.swift */; };
+		005BBDF521C7A72E00FA29E6 /* ContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBDF321C7A72E00FA29E6 /* ContentPageViewController.swift */; };
 		005BBDF621C7A72E00FA29E6 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BBDF421C7A72E00FA29E6 /* ContentViewController.xib */; };
 		005BBDFB21CB178900FA29E6 /* StickyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBDF921CB178900FA29E6 /* StickyHeaderViewController.swift */; };
 		005BBDFC21CB178900FA29E6 /* StickyHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BBDFA21CB178900FA29E6 /* StickyHeaderViewController.xib */; };
 		005BBDFE21CB412400FA29E6 /* StickyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBDFD21CB412400FA29E6 /* StickyHeader.swift */; };
+		005BBE0221CCCB6700FA29E6 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBE0021CCCB6700FA29E6 /* CategoryViewCell.swift */; };
+		005BBE0321CCCB6700FA29E6 /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BBE0121CCCB6700FA29E6 /* CategoryViewCell.xib */; };
+		005BBE0721CCD3FB00FA29E6 /* GoodMorningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBE0521CCD3FB00FA29E6 /* GoodMorningViewController.swift */; };
+		005BBE0821CCD3FB00FA29E6 /* GoodMorningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BBE0621CCD3FB00FA29E6 /* GoodMorningViewController.xib */; };
+		005BBE0B21CCE32900FA29E6 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BBE0921CCE32900FA29E6 /* HelloViewController.swift */; };
+		005BBE0C21CCE32900FA29E6 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005BBE0A21CCE32900FA29E6 /* HelloViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +64,17 @@
 		005BBDED21C7A60400FA29E6 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
 		005BBDEF21C7A70A00FA29E6 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		005BBDF021C7A70A00FA29E6 /* HeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewController.xib; sourceTree = "<group>"; };
-		005BBDF321C7A72E00FA29E6 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		005BBDF321C7A72E00FA29E6 /* ContentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPageViewController.swift; sourceTree = "<group>"; };
 		005BBDF421C7A72E00FA29E6 /* ContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		005BBDF921CB178900FA29E6 /* StickyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewController.swift; sourceTree = "<group>"; };
 		005BBDFA21CB178900FA29E6 /* StickyHeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickyHeaderViewController.xib; sourceTree = "<group>"; };
 		005BBDFD21CB412400FA29E6 /* StickyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeader.swift; sourceTree = "<group>"; };
+		005BBE0021CCCB6700FA29E6 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		005BBE0121CCCB6700FA29E6 /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
+		005BBE0521CCD3FB00FA29E6 /* GoodMorningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodMorningViewController.swift; sourceTree = "<group>"; };
+		005BBE0621CCD3FB00FA29E6 /* GoodMorningViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodMorningViewController.xib; sourceTree = "<group>"; };
+		005BBE0921CCE32900FA29E6 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		005BBE0A21CCE32900FA29E6 /* HelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,8 @@
 		005BBDBE21C7994900FA29E6 /* StickyHeader */ = {
 			isa = PBXGroup;
 			children = (
+				005BBE0421CCD3B800FA29E6 /* Category */,
+				005BBDFF21CCCB3700FA29E6 /* Cell */,
 				005BBDBF21C7994900FA29E6 /* AppDelegate.swift */,
 				005BBDC121C7994900FA29E6 /* ViewController.swift */,
 				005BBDC321C7994900FA29E6 /* Main.storyboard */,
@@ -122,7 +136,7 @@
 				005BBDED21C7A60400FA29E6 /* CustomScrollView.swift */,
 				005BBDEF21C7A70A00FA29E6 /* HeaderViewController.swift */,
 				005BBDF021C7A70A00FA29E6 /* HeaderViewController.xib */,
-				005BBDF321C7A72E00FA29E6 /* ContentViewController.swift */,
+				005BBDF321C7A72E00FA29E6 /* ContentPageViewController.swift */,
 				005BBDF421C7A72E00FA29E6 /* ContentViewController.xib */,
 				005BBDF921CB178900FA29E6 /* StickyHeaderViewController.swift */,
 				005BBDFA21CB178900FA29E6 /* StickyHeaderViewController.xib */,
@@ -147,6 +161,26 @@
 				005BBDE121C7994B00FA29E6 /* Info.plist */,
 			);
 			path = StickyHeaderUITests;
+			sourceTree = "<group>";
+		};
+		005BBDFF21CCCB3700FA29E6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				005BBE0021CCCB6700FA29E6 /* CategoryViewCell.swift */,
+				005BBE0121CCCB6700FA29E6 /* CategoryViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		005BBE0421CCD3B800FA29E6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				005BBE0521CCD3FB00FA29E6 /* GoodMorningViewController.swift */,
+				005BBE0621CCD3FB00FA29E6 /* GoodMorningViewController.xib */,
+				005BBE0921CCE32900FA29E6 /* HelloViewController.swift */,
+				005BBE0A21CCE32900FA29E6 /* HelloViewController.xib */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005BBE0C21CCE32900FA29E6 /* HelloViewController.xib in Resources */,
+				005BBE0821CCD3FB00FA29E6 /* GoodMorningViewController.xib in Resources */,
 				005BBDFC21CB178900FA29E6 /* StickyHeaderViewController.xib in Resources */,
+				005BBE0321CCCB6700FA29E6 /* CategoryViewCell.xib in Resources */,
 				005BBDF621C7A72E00FA29E6 /* ContentViewController.xib in Resources */,
 				005BBDCA21C7994B00FA29E6 /* LaunchScreen.storyboard in Resources */,
 				005BBDF221C7A70A00FA29E6 /* HeaderViewController.xib in Resources */,
@@ -283,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005BBDF521C7A72E00FA29E6 /* ContentViewController.swift in Sources */,
+				005BBDF521C7A72E00FA29E6 /* ContentPageViewController.swift in Sources */,
+				005BBE0B21CCE32900FA29E6 /* HelloViewController.swift in Sources */,
 				005BBDC221C7994900FA29E6 /* ViewController.swift in Sources */,
+				005BBE0221CCCB6700FA29E6 /* CategoryViewCell.swift in Sources */,
+				005BBE0721CCD3FB00FA29E6 /* GoodMorningViewController.swift in Sources */,
 				005BBDF121C7A70A00FA29E6 /* HeaderViewController.swift in Sources */,
 				005BBDC021C7994900FA29E6 /* AppDelegate.swift in Sources */,
 				005BBDEE21C7A60400FA29E6 /* CustomScrollView.swift in Sources */,

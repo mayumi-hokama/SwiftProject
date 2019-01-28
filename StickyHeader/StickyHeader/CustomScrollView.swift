@@ -88,8 +88,8 @@ class CustomScrollView: UIScrollView {
                     setContentOffset(view: self, offset: old)
                 } else if contentOffset.y < -contentInset.top, !bounces {
                     setContentOffset(view: self, offset: CGPoint(x: contentOffset.x, y: -contentInset.top))
-                } else if contentOffset.y > -100 {
-                    setContentOffset(view: self, offset: CGPoint(x: contentOffset.x, y: -100))
+                } else if contentOffset.y > -stickyHeader.minimumHeight {
+                    setContentOffset(view: self, offset: CGPoint(x: contentOffset.x, y: -stickyHeader.minimumHeight))
                 }
             } else {
                 //Adjust the observed scrollview's content offset

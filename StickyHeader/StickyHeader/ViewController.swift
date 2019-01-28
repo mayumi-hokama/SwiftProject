@@ -13,22 +13,28 @@ class ViewController: UIViewController {
     private lazy var contentContainerView: ContentContainerView = {
         let container = ContentContainerView()
         scrollView.addSubview(container)
-        addChild(containerView: container, viewController: contentViewController)
+        addChild(containerView: container, viewController: contentPageViewController)
         return container
     }()
 
-    private let contentViewController = ContentViewController()
+    private lazy var contentPageViewController: ContentPageViewController = {
+        let vc = ContentPageViewController()
+        vc.categoryDelegate = headerViewController
+        return vc
+    }()
+    
     private let headerViewController = HeaderViewController()
 
     @IBOutlet weak var scrollView: CustomScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "StickyHeaderテスト"
         setupHeader()
     }
 
     private func setupHeader() {
         self.scrollView.stickyHeader.height = 300
-        self.scrollView.stickyHeader.minimumHeight = 100
+        self.scrollView.stickyHeader.minimumHeight = 60
         self.scrollView.stickyHeader.view = headerViewController.view
         addChild(containerView: self.scrollView.stickyHeader.contentView, viewController: headerViewController)
     }
@@ -37,6 +43,7 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         // Contentのサイズ調整
         scrollView.contentSize = scrollView.frame.size
+        scrollView.stickyHeader.layoutContentView()
         layoutChildViewController()
     }
 
@@ -63,9 +70,9 @@ class ViewController: UIViewController {
 
 extension UIViewController {
     func addChild(containerView: UIView, viewController: UIViewController) {
-        addChild(viewController)
         viewController.view.frame = containerView.bounds
         containerView.addSubview(viewController.view)
+        addChild(viewController)
         viewController.didMove(toParent: self)
     }
 }

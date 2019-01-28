@@ -10,21 +10,46 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    let minimumHeight: CGFloat = 20.0
+    let height: CGFloat = 300.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setObserver()
     }
-    */
+    func setObserver() {
+        if let parentVC = self.parent as? TabContainerViewController {
+            parentVC.scrollView.addObserver(self, forKeyPath: "contentOffset", options: [.new, .old], context: nil)
+        }
+    }
 
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentOffset" {
+
+            if let scrollView = object as? UIScrollView {
+                // frame位置更新
+                layoutContentView(scrollView)
+            }
+        }
+
+    }
+    deinit {
+        if let parentVC = self.parent as? TabContainerViewController {
+            parentVC.scrollView.removeObserver(self, forKeyPath: "contentOffset")
+        }
+    }
+    func layoutContentView(_ scrollView: UIScrollView) {
+        let minimumHeight = (self.minimumHeight < self.height) ? self.minimumHeight : self.height
+        let relativeYOffset = scrollView.contentOffset.y + scrollView.contentInset.top - self.height
+        let relativeHeight  = -relativeYOffset;
+
+        let frame = CGRect(x: 0, y: relativeYOffset, width: scrollView.frame.size.width, height: (relativeHeight > minimumHeight) ? relativeHeight : minimumHeight )
+
+        self.view.frame = frame
+
+    }
 }

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,47 +78,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTr-ac-R4A">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="H2Y-Fr-hWO"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="embed" id="csg-nI-iMd"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYa-oU-IZF">
-                                <rect key="frame" x="0.0" y="300" width="375" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="x1v-M5-cMZ"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="ezh-Yg-fVR" kind="embed" id="4vP-K4-xoY"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9e-yD-d00">
-                                <rect key="frame" x="0.0" y="360" width="375" height="307"/>
-                                <connections>
-                                    <segue destination="G6W-Nk-IXc" kind="embed" id="SbR-fz-TeI"/>
-                                </connections>
-                            </containerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-zp-pDl" customClass="CustomScrollView" customModule="TwitterProfile" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wTr-ac-R4A" firstAttribute="leading" secondItem="soZ-cF-BWh" secondAttribute="leading" id="22L-R8-qst"/>
-                            <constraint firstAttribute="bottom" secondItem="O9e-yD-d00" secondAttribute="bottom" id="Cvy-Ue-X6U"/>
-                            <constraint firstItem="wTr-ac-R4A" firstAttribute="trailing" secondItem="soZ-cF-BWh" secondAttribute="trailing" id="Jm7-Wd-Nbv"/>
-                            <constraint firstItem="iYa-oU-IZF" firstAttribute="trailing" secondItem="soZ-cF-BWh" secondAttribute="trailing" id="LtK-wi-1Uc"/>
-                            <constraint firstItem="O9e-yD-d00" firstAttribute="top" secondItem="iYa-oU-IZF" secondAttribute="bottom" id="Ndi-Za-Eco"/>
-                            <constraint firstItem="iYa-oU-IZF" firstAttribute="leading" secondItem="soZ-cF-BWh" secondAttribute="leading" id="NwU-2o-U2d"/>
-                            <constraint firstItem="O9e-yD-d00" firstAttribute="trailing" secondItem="soZ-cF-BWh" secondAttribute="trailing" id="SDg-PX-aaj"/>
-                            <constraint firstItem="wTr-ac-R4A" firstAttribute="top" secondItem="kdv-KC-cxb" secondAttribute="top" id="cHg-p1-QPo"/>
-                            <constraint firstItem="O9e-yD-d00" firstAttribute="leading" secondItem="soZ-cF-BWh" secondAttribute="leading" id="qPh-v1-jqq"/>
-                            <constraint firstItem="iYa-oU-IZF" firstAttribute="top" secondItem="wTr-ac-R4A" secondAttribute="bottom" id="y3G-Av-wMR"/>
+                            <constraint firstAttribute="bottom" secondItem="ACa-zp-pDl" secondAttribute="bottom" id="CZ5-0M-bFP"/>
+                            <constraint firstAttribute="trailing" secondItem="ACa-zp-pDl" secondAttribute="trailing" id="X7W-Xo-OnP"/>
+                            <constraint firstItem="ACa-zp-pDl" firstAttribute="top" secondItem="kdv-KC-cxb" secondAttribute="top" id="jNh-qc-vUS"/>
+                            <constraint firstItem="ACa-zp-pDl" firstAttribute="leading" secondItem="kdv-KC-cxb" secondAttribute="leading" id="lNG-7W-vfx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="soZ-cF-BWh"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="ACa-zp-pDl" id="PEC-ig-nKp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B27-8o-Vbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +103,7 @@
         <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="TwitterProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="BYZ-38-t0r" customClass="ProfileViewController" customModule="TwitterProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +124,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ZC8-yc-Zpb" firstAttribute="centerY" secondItem="TwP-E1-tEq" secondAttribute="centerY" id="XOh-Kh-xwO"/>
                                     <constraint firstItem="ZC8-yc-Zpb" firstAttribute="centerX" secondItem="TwP-E1-tEq" secondAttribute="centerX" id="ZC5-B9-rkb"/>
@@ -186,18 +163,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="-1034"/>
+            <point key="canvasLocation" x="-393" y="-1055"/>
         </scene>
         <!--Category Tab View Controller-->
         <scene sceneID="U5b-Vl-8gA">
             <objects>
-                <viewController id="ezh-Yg-fVR" customClass="CategoryTabViewController" customModule="TwitterProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryTabViewController" id="ezh-Yg-fVR" customClass="CategoryTabViewController" customModule="TwitterProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QGR-cJ-ce0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="357-Ty-vUT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p8F-ge-Lau">
                                     <size key="itemSize" width="50" height="50"/>
@@ -215,6 +192,7 @@
                             <constraint firstAttribute="bottom" secondItem="357-Ty-vUT" secondAttribute="bottom" id="Rrt-KP-Vep"/>
                             <constraint firstAttribute="trailing" secondItem="357-Ty-vUT" secondAttribute="trailing" id="o0d-4K-uSS"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="fXk-EE-XZp"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="357-Ty-vUT" id="Mnb-OX-4WS"/>
@@ -223,15 +201,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9Q-Vk-q5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342" y="-738"/>
+            <point key="canvasLocation" x="390" y="-290"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="yfB-R5-2ic">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="G6W-Nk-IXc" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="G6W-Nk-IXc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WG7-2n-kZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-343" y="-350"/>
+            <point key="canvasLocation" x="-370" y="-21"/>
         </scene>
     </scenes>
     <resources>

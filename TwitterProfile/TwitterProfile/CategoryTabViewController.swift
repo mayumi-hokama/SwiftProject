@@ -116,6 +116,7 @@ extension CategoryTabViewController: UICollectionViewDataSource {
 
         // インデックス値に相当するタブを真ん中に表示させる
         let targetIndexPath = IndexPath(row: currentSelectIndex, section: 0)
+    
         collectionView.scrollToItem(at: targetIndexPath, at: .centeredHorizontally, animated: withAnimated)
     }
 
